@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+header, footer, article, div, aside, nav {
+    border-radius: 3px;
+    background-color: yellow;
+    border: 1px solid orange;
+    padding: 10px;
+    margin-bottom: 1%;
+    width: 100%;
+    
+}
+
+footer {
+    
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+  nav ul {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+
+    header {
+       order: 0; 
+    }
+    nav {
+       order: 1; 
+    }
+    article {
+        width: 70%;
+        order: 3;
+        
+    }
+
+    aside {
+        width: 29%;
+        order: 2;
+      
+    }
+
+    #advertising {
+        order: 4;
+        width: 29%;
+    }
+
+    footer {
+        order: 5;
+        width: 70%;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    nav {
+        width: 20%;
+    }
+    nav ul {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+    main {
+        justify-content: flex-end;
+    }
+
+    aside, #advertising {
+        width: 20%;
+        margin-left: 1%;
+    }
+
+    article {
+        width: 58%;
+        order: 2;
+        margin-left: 1%;
+    }
+
+    aside {
+        order: 3;
+    }
+
+    #advertising {
+        order: 4;
+    }
+
+    footer {
+        width: 100%;
+    }
+    
+}
